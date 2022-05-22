@@ -17,7 +17,9 @@ import { MatInputModule } from '@angular/material/input';
 import { AvailableFlightsComponent } from './available-flights/available-flights.component';
 import {MatTableModule} from '@angular/material/table';
 import { PurchasingTicketComponent } from './purchasing-ticket/purchasing-ticket.component';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -36,10 +38,13 @@ import { PurchasingTicketComponent } from './purchasing-ticket/purchasing-ticket
     FormsModule,
     HttpClientModule,
     MatAutocompleteModule,
+    MatFormFieldModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatCardModule,
     MatInputModule,
     MatTableModule,
+    MatDatepickerModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
