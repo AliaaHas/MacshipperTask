@@ -1,0 +1,49 @@
+
+<h2>AvaliableFlights</h2>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>From</mat-label>
+    <input  #from type="text"
+           placeholder="Pick one"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of trips" [value]="option.from">
+        {{option.from}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>To</mat-label>
+    <input #to type="text"
+           placeholder="Pick one"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option  *ngFor="let item of trips" [value]="item.to">
+        {{item.to}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+
+<button mat-raised-button color="accent" routerLink="/Avaliable/{{from.value}}/{{to.value}}">Search</button>
+
+
+<!-- <hr>
+<div style="text-align:center">
+
+  <ul *ngFor="let item of trips">
+     <li>
+        <h3>trip :{{item.from}}, fare: {{item.fare| currency}}</h3>
+     </li>
+  </ul>
+</div> -->
