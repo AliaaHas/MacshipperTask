@@ -7,8 +7,9 @@ import { PurchasingTicketComponent } from './purchasing-ticket/purchasing-ticket
 
 const routes: Routes = [
   {path:'Home',component:HomeComponent},
+  {path:'book/:id',component:PurchasingTicketComponent},
   {path:'Avaliable/:c1/:c2',component:AvailableFlightsComponent},
-  {path:'book',component:PurchasingTicketComponent}
+
 
 ];
 @NgModule({

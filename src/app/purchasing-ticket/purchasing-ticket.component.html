@@ -1,3 +1,4 @@
+
 <form [formGroup]="Purchasingticketformgroup" (ngSubmit)="submit()" class="form-container">
   <mat-card>
     <mat-card-header>
@@ -6,55 +7,57 @@
 
     <mat-card-content>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-7">
           <mat-form-field class="full-width">
             <input  formControlName="PassengerName" matInput placeholder="Enter your name">
-            <span class="text-danger"
-                    *ngIf="(name.touched || submitted) && name.errors?.['required']">
-                        PassengerName is required
-                 </span>
+
           </mat-form-field>
+          <span class="text-danger"
+          *ngIf="(name.touched || submitted) && name.errors?.['required']">
+              PassengerName is required
+       </span>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-7">
           <mat-form-field class="full-width">
             <input  formControlName="PassengerPhone" matInput placeholder="Enter phone Number">
-
-            <span class="text-danger"
-                                *ngIf="(phone.touched || submitted) && phone.errors?.['required']">
-                                PassengerPhone is required
-                            </span>
           </mat-form-field>
+          <span class="text-danger"
+               *ngIf="(phone.touched || submitted) && phone.errors?.['required']">
+                   PassengerPhone is required
+           </span>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-7">
           <mat-form-field class="full-width">
             <input  formControlName="PassengerAge" matInput placeholder="Enter Your Age">
-            <span class="text-danger"
+
+          </mat-form-field>
+          <span class="text-danger"
                                 *ngIf="(age.touched || submitted) && age.errors?.['required']">
                                 PassengerAge is required
                             </span>
-          </mat-form-field>
         </div>
        </div>
-       <div class="col-md-6">
+       <div class="col-md-7">
         <mat-form-field class="full-width">
           <input type="number" formControlName="TicketsNumber" matInput placeholder="NumberOfTickets">
-          <span class="text-danger"
+        </mat-form-field>
+        <span class="text-danger"
                                 *ngIf="(num.touched || submitted) && num.errors?.['required']">
                                 TicketsNumber is required
                             </span>
-        </mat-form-field>
       </div>
-       <div class="col-md-6">
+       <div class="col-md-7">
         <mat-form-field class="full-width">
           <input formControlName="TripID" matInput placeholder="TripID">
-
+{{trip.id}}
         </mat-form-field>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-7">
         <mat-form-field class="full-width">
           <input formControlName="TripFare" matInput placeholder="TripFare">
+          {{trip.fare}}
         </mat-form-field>
       </div>
     </mat-card-content>

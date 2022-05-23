@@ -1,9 +1,9 @@
 
-<h2>AvaliableFlights</h2>
+<h2>{{ 'Home.h' | translate }}</h2>
 
 <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>From</mat-label>
+    <mat-label>{{ 'Home.from' | translate }}</mat-label>
     <input  #from type="text"
            placeholder="Pick one"
            aria-label="Number"
@@ -19,7 +19,7 @@
 </form>
 <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>To</mat-label>
+    <mat-label>{{ 'Home.to' | translate }}</mat-label>
     <input #to type="text"
            placeholder="Pick one"
            aria-label="Number"
@@ -35,7 +35,7 @@
 </form>
 
 
-<button mat-raised-button color="accent" routerLink="/Avaliable/{{from.value}}/{{to.value}}">Search</button>
+<button mat-raised-button color="accent" routerLink="/Avaliable/{{from.value}}/{{to.value}}">{{ 'Home.btn' | translate }}</button>
 
 
 <!-- <hr>

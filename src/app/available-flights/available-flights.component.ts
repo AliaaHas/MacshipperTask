@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import data from "../../assets/Data/data.json"
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-available-flights',
@@ -14,20 +14,28 @@ export class AvailableFlightsComponent implements OnInit {
   location1:any;
   location2:any;
 
+
   displayedColumns: string[] = ['id', 'from', 'to', 'fare','departure','arreval'];
   columnsToDisplay: string[] = this.displayedColumns.slice();
   data: any[] = this.flights;
 
-
-  constructor(private route:ActivatedRoute) {
+  constructor(private route:ActivatedRoute,
+    private translate: TranslateService,) {
+      translate.setDefaultLang('en');
+      translate.use('en');
 
    }
+   useLanguage(language: string): void {
+    this.translate.use(language);
+}
+
 
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.location1 = params.get('c1');
       this.location2 = params.get('c2');
+
       this.avilableFlights(this.location1, this.location2);
 
     })

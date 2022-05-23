@@ -24,6 +24,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import {MatDividerModule} from '@angular/material/divider';
   ],
   imports: [
     MatToolbarModule,
+    MatBadgeModule,
     MatSidenavModule,
     MatIconModule,
     MatDividerModule,
