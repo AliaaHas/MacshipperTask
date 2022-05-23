@@ -13,9 +13,9 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class HomeComponent implements OnInit {
   myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
+  options: string[] = [];
   filteredOptions!: Observable<string[]>;
-  public trips:{from:string,to:string, fare:number,departure:string,arreval:string}[] = data;
+  public trips:{from:string, to:string, fare:number,departure:string,arreval:string}[] = data;
   constructor(private route:ActivatedRoute,
     private translate: TranslateService
     ) {

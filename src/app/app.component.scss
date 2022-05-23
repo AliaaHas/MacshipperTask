@@ -1,13 +1,17 @@
 
+
+.example-spacer {
+  flex: 1 1 auto;
+}
 mat-toolbar
 {
   background-color: cadetblue;
-  color: black;
+  color: white;
+
 
 }
 mat-sidenav{
 margin: 16px;
-width: 200px;
 border-right: none;
 background-color: cadetblue;
 color: white;

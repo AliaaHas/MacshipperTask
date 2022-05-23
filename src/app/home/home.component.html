@@ -1,7 +1,7 @@
 
 <h2>{{ 'Home.h' | translate }}</h2>
 
-<form class="example-form">
+<!-- <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>{{ 'Home.from' | translate }}</mat-label>
     <input  #from type="text"
@@ -17,6 +17,7 @@
     </mat-autocomplete>
   </mat-form-field>
 </form>
+
 <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>{{ 'Home.to' | translate }}</mat-label>
@@ -27,23 +28,28 @@
            [formControl]="myControl"
            [matAutocomplete]="auto">
     <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-      <mat-option  *ngFor="let item of trips" [value]="item.to">
-        {{item.to}}
+      <mat-option  *ngFor="let option of trips" [value]="option.to">
+        {{option.to}}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
-</form>
+</form> -->
+
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>From</mat-label>
+    <input  #from  matInput >
+  </mat-form-field>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>To</mat-label>
+      <input  #to matInput  >
+    </mat-form-field>
+
+
 
 
 <button mat-raised-button color="accent" routerLink="/Avaliable/{{from.value}}/{{to.value}}">{{ 'Home.btn' | translate }}</button>
 
 
-<!-- <hr>
-<div style="text-align:center">
-
-  <ul *ngFor="let item of trips">
-     <li>
-        <h3>trip :{{item.from}}, fare: {{item.fare| currency}}</h3>
-     </li>
-  </ul>
-</div> -->
