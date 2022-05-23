@@ -21,14 +21,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AvailableFlightsComponent,
     PurchasingTicketComponent,
-
   ],
   imports: [
     BrowserModule,

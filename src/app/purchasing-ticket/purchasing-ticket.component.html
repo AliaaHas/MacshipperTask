@@ -1,13 +1,14 @@
-<form [formGroup]="Purchasingticketformgroup" class="form-container">
+<form [formGroup]="Purchasingticketformgroup" (ngSubmit)="submit()" class="form-container">
   <mat-card>
     <mat-card-header>
       <mat-card-title>Passenger Information</mat-card-title>
     </mat-card-header>
+  
     <mat-card-content>
       <div class="row">
         <div class="col-md-6">
           <mat-form-field class="full-width">
-            <input formControlName="PassengerName" matInput placeholder="Enter your name">
+            <input value="info.PassengerName" formControlName="PassengerName" matInput placeholder="Enter your name">
           </mat-form-field>
         </div>
         <div class="col-md-6">
@@ -25,6 +26,11 @@
        </div>
        <div class="col-md-6">
         <mat-form-field class="full-width">
+          <input type="number" formControlName="TicketsNumber" matInput placeholder="NumberOfTickets">
+        </mat-form-field>
+      </div>
+       <div class="col-md-6">
+        <mat-form-field class="full-width">
           <input formControlName="TripID" matInput placeholder="TripID">
         </mat-form-field>
       </div>
@@ -35,7 +41,7 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary">Save</button>
+      <button mat-raised-button color="primary" type="submit">Save</button>
     </mat-card-actions>
   </mat-card>
 </form>
