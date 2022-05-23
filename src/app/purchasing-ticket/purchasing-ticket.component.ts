@@ -32,8 +32,8 @@ export class PurchasingTicketComponent implements OnInit {
 
     ) {
 
-      translate.setDefaultLang('en');
-      translate.use('en');
+      // translate.setDefaultLang('en');
+      // translate.use('en');
 
     this.Purchasingticketformgroup=fb.group({
       PassengerName:['',[Validators.required,Validators.minLength(3),Validators.pattern('^[a-zA-Z]+$')],this.customValidator.userNameValidator.bind(this.customValidator)],

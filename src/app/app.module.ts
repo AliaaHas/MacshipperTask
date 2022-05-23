@@ -25,7 +25,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatBadgeModule} from '@angular/material/badge';
-import{NgToastModule} from 'ng-angular-popup'
+import{NgToastModule} from 'ng-angular-popup';
+import { HeaderComponent } from './header/header.component';
+import { SidenavComponent } from './sidenav/sidenav.component'
 
 
 
@@ -35,6 +37,8 @@ import{NgToastModule} from 'ng-angular-popup'
     HomeComponent,
     AvailableFlightsComponent,
     PurchasingTicketComponent,
+    HeaderComponent,
+    SidenavComponent,
   ],
   imports: [
     NgToastModule,

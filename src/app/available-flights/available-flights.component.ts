@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import data from "../../assets/Data/data.json"
 import {TranslateService} from "@ngx-translate/core";
+import {NgToastService} from 'ng-angular-popup'
+
 
 @Component({
   selector: 'app-available-flights',
@@ -20,9 +22,10 @@ export class AvailableFlightsComponent implements OnInit {
   data: any[] = this.flights;
 
   constructor(private route:ActivatedRoute,
-    private translate: TranslateService,) {
-      translate.setDefaultLang('en');
-      translate.use('en');
+    private translate: TranslateService,
+    private toast :NgToastService,) {
+      // translate.setDefaultLang('en');
+      // translate.use('en');
 
    }
    useLanguage(language: string): void {
@@ -44,6 +47,10 @@ export class AvailableFlightsComponent implements OnInit {
 
   this.flights= data.filter((item: { from: string; to: string; }) => item.from === country1 && item.to === country2);
  console.log(this.flights);
+ if(this.flights.length==0){
+  this.toast.warning
+      ({detail:"No Trips Avaliable",duration:5000})
+}
 
   }
 

@@ -29,8 +29,8 @@ export class HomeComponent implements OnInit {
         to:['',[Validators.required,Validators.pattern('^[a-zA-Z]+$')]],
 
       })
-      translate.setDefaultLang('en');
-      translate.use('en');
+      // translate.setDefaultLang('en');
+      // translate.use('en');
     }
 
     useLanguage(language: string): void {
