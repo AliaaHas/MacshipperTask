@@ -10,11 +10,7 @@
   {"id":8,"from" : "Amsterdam","to":"Nigeria", "fare" : 500 ,"departure":"2am","arreval":"7am"},
   {"id":9,"from" : "Oman","to":"Qatar", "fare" : 280 ,"departure":"2am","arreval":"7am"},
   {"id":10,"from": "Moscow", "to":"Colombo", "fare" : 390 ,"departure":"2am","arreval":"7am"},
-  {"id":11,"from" : "Egypt","to":" Sudan ", "fare" : 100 ,"departure":"10am","arreval":"3pm"},
-  {"id":12,"from" : "Oman","to":"Qatar", "fare" : 280 ,"departure":"8am","arreval":"1pm"},
-  {"id":13,"from" : "Italy","to":"Japan", "fare" : 300 ,"departure":"1am","arreval":"3am"},
-  {"id":14,"from" : "Egypt","to":"Morocco", "fare" : 300 ,"departure":"1am","arreval":"3am"},
-  {"id":15,"from" : "Egypt","to":"Morocco", "fare" : 300 ,"departure":"1am","arreval":"3am"}
+  {"id":11,"from" : "Egypt","to":"Morocco", "fare" : 300 ,"departure":"1am","arreval":"3am"}
 
 
 ]

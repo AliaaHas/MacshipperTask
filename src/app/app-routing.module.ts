@@ -4,13 +4,13 @@ import { AvailableFlightsComponent } from './available-flights/available-flights
 import { HomeComponent } from './home/home.component';
 import { PurchasingTicketComponent } from './purchasing-ticket/purchasing-ticket.component';
 
+
 const routes: Routes = [
   {path:'Home',component:HomeComponent},
   {path:'Avaliable/:c1/:c2',component:AvailableFlightsComponent},
   {path:'book',component:PurchasingTicketComponent}
 
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

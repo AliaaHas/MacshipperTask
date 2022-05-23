@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CustomvalidatioService } from '../services/customvalidatio.service'
+
 
 @Component({
   selector: 'app-purchasing-ticket',
@@ -9,14 +11,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class PurchasingTicketComponent implements OnInit {
 
   Purchasingticketformgroup:FormGroup;
-  constructor(private fb:FormBuilder) {
+  submitted = false;
+
+  constructor(private fb:FormBuilder,
+    private customValidator: CustomvalidatioService
+    ) {
     this.Purchasingticketformgroup=fb.group({
-      PassengerName:['',[Validators.required,Validators.minLength(3)]],
-      PassengerPhone:[''],
-      PassengerAge:[''],
-      TripID:[],
-      TripFare:[],
-      TicketsNumber:[]
+      PassengerName:['',[Validators.required,Validators.minLength(3)],this.customValidator.userNameValidator.bind(this.customValidator)],
+      PassengerPhone:['',[Validators.required]],
+      PassengerAge:['',[Validators.required]],
+      TripID:['',[Validators.required]],
+      TripFare:['',[Validators.required]],
+      TicketsNumber:['',[Validators.required]]
     })
    }
 
@@ -27,6 +33,26 @@ export class PurchasingTicketComponent implements OnInit {
   }
 
    info=localStorage.getItem('info');
-  
+
+
+
+   get name() {
+    return this.Purchasingticketformgroup.controls['PassengerName'];
+  }
+  get phone() {
+    return this.Purchasingticketformgroup.controls['PassengerPhone'];
+  }
+
+  get age() {
+    return this.Purchasingticketformgroup.controls['PassengerAge'];
+  }
+
+   get num() {
+    return this.Purchasingticketformgroup.controls['TicketsNumber'];
+  }
+
+
+
+
 
 }

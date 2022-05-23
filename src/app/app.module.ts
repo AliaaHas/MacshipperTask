@@ -20,6 +20,11 @@ import { PurchasingTicketComponent } from './purchasing-ticket/purchasing-ticket
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +34,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     PurchasingTicketComponent,
   ],
   imports: [
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatDividerModule,
     BrowserModule,
     AppRoutingModule,
     MatSelectModule,
