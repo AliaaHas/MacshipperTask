@@ -2,14 +2,14 @@
 <form [formGroup]="Purchasingticketformgroup" (ngSubmit)="submit()" class="form-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Passenger Information</mat-card-title>
+      <mat-card-title>{{ 'passenger.h' | translate }}</mat-card-title>
     </mat-card-header>
 
     <mat-card-content>
       <div class="row">
         <div class="col-md-7">
           <mat-form-field class="full-width">
-            <input  formControlName="PassengerName" matInput placeholder="Enter your name">
+            <input  formControlName="PassengerName" matInput placeholder="{{ 'passenger.name' | translate }}">
 
           </mat-form-field>
           <span class="text-danger"
@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-7">
           <mat-form-field class="full-width">
-            <input  formControlName="PassengerPhone" matInput placeholder="Enter phone Number">
+            <input  formControlName="PassengerPhone" matInput placeholder="{{ 'passenger.phone' | translate }}">
           </mat-form-field>
           <span class="text-danger"
                *ngIf="(phone.touched || submitted) && phone.errors?.['required']">
@@ -30,7 +30,7 @@
       <div class="row">
         <div class="col-sm-7">
           <mat-form-field class="full-width">
-            <input  formControlName="PassengerAge" matInput placeholder="Enter Your Age">
+            <input  formControlName="PassengerAge" matInput placeholder="{{ 'passenger.age' | translate }}">
 
           </mat-form-field>
           <span class="text-danger"
@@ -41,7 +41,7 @@
        </div>
        <div class="col-md-7">
         <mat-form-field class="full-width">
-          <input type="number" formControlName="TicketsNumber" matInput placeholder="NumberOfTickets">
+          <input type="number" formControlName="TicketsNumber" matInput placeholder="{{ 'passenger.num' | translate }}">
         </mat-form-field>
         <span class="text-danger"
                                 *ngIf="(num.touched || submitted) && num.errors?.['required']">
@@ -50,19 +50,19 @@
       </div>
        <div class="col-md-7">
         <mat-form-field class="full-width">
-          <input formControlName="TripID" matInput placeholder="TripID">
+          <input formControlName="TripID" matInput placeholder="{{ 'passenger.id' | translate }}">
 {{trip.id}}
         </mat-form-field>
       </div>
       <div class="col-md-7">
         <mat-form-field class="full-width">
-          <input formControlName="TripFare" matInput placeholder="TripFare">
+          <input formControlName="TripFare" matInput placeholder="{{ 'passenger.fare' | translate }}">
           {{trip.fare}}
         </mat-form-field>
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="accent" type="submit">Save</button>
+      <button mat-raised-button color="accent" type="submit">{{ 'passenger.btn' | translate }}</button>
     </mat-card-actions>
   </mat-card>
 </form>

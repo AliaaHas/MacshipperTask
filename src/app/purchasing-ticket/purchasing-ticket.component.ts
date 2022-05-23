@@ -35,8 +35,8 @@ export class PurchasingTicketComponent implements OnInit {
       PassengerName:['',[Validators.required,Validators.minLength(3)],this.customValidator.userNameValidator.bind(this.customValidator)],
       PassengerPhone:['',[Validators.required]],
       PassengerAge:['',[Validators.required]],
-      TripID:['',[Validators.required]],
-      TripFare:['',[Validators.required]],
+      TripID:[''],
+      TripFare:[''],
       TicketsNumber:['',[Validators.required]]
     })
    }
