@@ -1,55 +1,18 @@
 
 <h2>{{ 'Home.h' | translate }}</h2>
 
-<!-- <form class="example-form">
+
+<form class="example-form" [formGroup]="Homeformgroup" (ngSubmit)="search()">
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>{{ 'Home.from' | translate }}</mat-label>
-    <input  #from type="text"
-           placeholder="Pick one"
-           aria-label="Number"
-           matInput
-           [formControl]="myControl"
-           [matAutocomplete]="auto">
-    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-      <mat-option *ngFor="let option of trips" [value]="option.from">
-        {{option.from}}
-      </mat-option>
-    </mat-autocomplete>
+    <input  #from  matInput formControlName="from" >
   </mat-form-field>
-</form>
-
-<form class="example-form">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>{{ 'Home.to' | translate }}</mat-label>
-    <input #to type="text"
-           placeholder="Pick one"
-           aria-label="Number"
-           matInput
-           [formControl]="myControl"
-           [matAutocomplete]="auto">
-    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-      <mat-option  *ngFor="let option of trips" [value]="option.to">
-        {{option.to}}
-      </mat-option>
-    </mat-autocomplete>
-  </mat-form-field>
-</form> -->
-
-
-<form class="example-form">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>From</mat-label>
-    <input  #from  matInput >
-  </mat-form-field>
-  <form class="example-form">
+  <form class="example-form" [formGroup]="Homeformgroup">
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>To</mat-label>
-      <input  #to matInput  >
+      <mat-label>{{ 'Home.to' | translate }}</mat-label>
+      <input  #to matInput formControlName="to" >
     </mat-form-field>
 
-
-
-
-<button mat-raised-button color="accent" routerLink="/Avaliable/{{from.value}}/{{to.value}}">{{ 'Home.btn' | translate }}</button>
+<button mat-raised-button color="accent"  routerLink="/Avaliable/{{from.value}}/{{to.value}}">{{ 'Home.btn' | translate }}</button>
 
 

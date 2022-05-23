@@ -1,6 +1,35 @@
 {
 	"demo": {
-		"text": "This is a simple demonstration app for ngx-translate",
-		"title": "Translation demo"
-	}
+		"bookflight": "Booking Flight",
+		"home": "Home",
+    "book":"Booking",
+    "info":"About",
+    "help":"Help",
+    "happy":"Happy Travel"
+	},
+
+  "Home":{
+    "h":"AvaliableFlights",
+    "btn":"Search",
+    "from":"from",
+    "to":"to"
+  },
+  "available":{
+    "btn":"Book",
+    "title":"Avilable trips"
+  },
+  "passenger":{
+    "h":"Passenger Information",
+    "btn":"Save",
+    "name":"Enter your name",
+    "phone":"Enter phone Number",
+    "age":"Enter Your Age",
+    "num":"NumberOfTickets",
+    "id":"TripID",
+    "fare":"TripFare"
+  }
+
 }
+
+
+

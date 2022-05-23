@@ -25,6 +25,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatBadgeModule} from '@angular/material/badge';
+import{NgToastModule} from 'ng-angular-popup'
+
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     PurchasingTicketComponent,
   ],
   imports: [
+    NgToastModule,
     MatToolbarModule,
     MatBadgeModule,
     MatSidenavModule,

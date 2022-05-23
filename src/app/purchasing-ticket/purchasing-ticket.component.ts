@@ -5,6 +5,8 @@ import { CustomvalidatioService } from '../services/customvalidatio.service'
 import data from "../../assets/Data/data.json"
 import { Tripdata } from '../tripdata';
 import {TranslateService} from "@ngx-translate/core";
+import {NgToastService} from 'ng-angular-popup'
+
 
 
 
@@ -26,15 +28,17 @@ export class PurchasingTicketComponent implements OnInit {
     private customValidator: CustomvalidatioService,
     private route:ActivatedRoute,
     private translate: TranslateService,
+    private toast :NgToastService,
+
     ) {
 
       translate.setDefaultLang('en');
       translate.use('en');
 
     this.Purchasingticketformgroup=fb.group({
-      PassengerName:['',[Validators.required,Validators.minLength(3)],this.customValidator.userNameValidator.bind(this.customValidator)],
-      PassengerPhone:['',[Validators.required]],
-      PassengerAge:['',[Validators.required]],
+      PassengerName:['',[Validators.required,Validators.minLength(3),Validators.pattern('^[a-zA-Z]+$')],this.customValidator.userNameValidator.bind(this.customValidator)],
+      PassengerPhone:['',[Validators.required,Validators.pattern("(01)[0-9 ]{9}")]],
+      PassengerAge:['',[Validators.required,Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
       TripID:[''],
       TripFare:[''],
       TicketsNumber:['',[Validators.required]]
@@ -54,10 +58,17 @@ export class PurchasingTicketComponent implements OnInit {
      })
   }
   submit(){
-    localStorage.setItem('info',JSON.stringify(this.Purchasingticketformgroup.value))
+    if(this.Purchasingticketformgroup.valid){
+      localStorage.setItem('info',JSON.stringify(this.Purchasingticketformgroup.value))
+
+    }else{
+      // alert("unvalid");
+      this.toast.warning
+      ({detail:"FormData Not Completed",duration:5000})
+
+    }
   }
 
-   info=localStorage.getItem('info');
 
 
 

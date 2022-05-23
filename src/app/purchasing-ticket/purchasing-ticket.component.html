@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-md-7">
           <mat-form-field class="full-width">
-            <input  formControlName="PassengerName" matInput placeholder="{{ 'passenger.name' | translate }}">
+            <input type="text"  formControlName="PassengerName" matInput placeholder="{{ 'passenger.name' | translate }}">
 
           </mat-form-field>
           <span class="text-danger"
@@ -50,14 +50,14 @@
       </div>
        <div class="col-md-7">
         <mat-form-field class="full-width">
-          <input formControlName="TripID" matInput placeholder="{{ 'passenger.id' | translate }}">
-{{trip.id}}
+          <input  [ngModel]="trip.id" readonly="true" formControlName="TripID" matInput placeholder="{{ 'passenger.id' | translate }}">
+
         </mat-form-field>
       </div>
       <div class="col-md-7">
         <mat-form-field class="full-width">
-          <input formControlName="TripFare" matInput placeholder="{{ 'passenger.fare' | translate }}">
-          {{trip.fare}}
+          <input [ngModel]="trip.fare" readonly="true" formControlName="TripFare" matInput placeholder="{{ 'passenger.fare' | translate }}">
+
         </mat-form-field>
       </div>
     </mat-card-content>

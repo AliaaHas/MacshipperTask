@@ -35,9 +35,7 @@ export class AvailableFlightsComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.location1 = params.get('c1');
       this.location2 = params.get('c2');
-
       this.avilableFlights(this.location1, this.location2);
-
     })
 
   }

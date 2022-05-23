@@ -1,6 +1,6 @@
 
 [
-  {"id":1,"from" : "Egypt","to":" Sudan ", "fare" : 100 ,"departure":"2am","arreval":"7am"},
+  {"id":1,"from" : "Egypt","to":"Sudan", "fare" : 100 ,"departure":"2am","arreval":"7am"},
   {"id":2,"from" : "Egypt", "to":"Saudi Arabia", "fare" : 150 ,"departure":"7am","arreval":"4pm"},
   {"id":3,"from" : "Morocco","to":"Iraq", "fare" : 200 ,"departure":"2am","arreval":"7am"},
   {"id":4,"from" : "Qatar","to":"Kuwait", "fare" : 250 ,"departure":"2am","arreval":"7am"},
@@ -10,7 +10,10 @@
   {"id":8,"from" : "Amsterdam","to":"Nigeria", "fare" : 500 ,"departure":"2am","arreval":"7am"},
   {"id":9,"from" : "Oman","to":"Qatar", "fare" : 280 ,"departure":"2am","arreval":"7am"},
   {"id":10,"from": "Moscow", "to":"Colombo", "fare" : 390 ,"departure":"2am","arreval":"7am"},
-  {"id":11,"from" : "Egypt","to":"Morocco", "fare" : 300 ,"departure":"1am","arreval":"3am"}
+  {"id":11,"from" : "Egypt","to":"Morocco", "fare" : 300 ,"departure":"1am","arreval":"3am"},
+  {"id":12,"from" : "Oman","to":"Qatar", "fare" : 200 ,"departure":"7am","arreval":"10am"},
+  {"id":13,"from" : "Egypt","to":"Sudan", "fare" : 500 ,"departure":"4am","arreval":"10am"},
+  {"id":7,"from" : "Italy","to":"Japan", "fare" : 200 ,"departure":"3am","arreval":"9am"}
 
 
 ]
