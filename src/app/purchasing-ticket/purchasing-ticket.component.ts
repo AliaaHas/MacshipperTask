@@ -41,7 +41,8 @@ export class PurchasingTicketComponent implements OnInit {
       PassengerAge:['',[Validators.required,Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
       TripID:[''],
       TripFare:[''],
-      TicketsNumber:['',[Validators.required]]
+      TicketsNumber:['',[Validators.required]],
+      Credetcard:['',[Validators.required]]
     })
    }
 
@@ -86,6 +87,10 @@ export class PurchasingTicketComponent implements OnInit {
    get num() {
     return this.Purchasingticketformgroup.controls['TicketsNumber'];
   }
+  get card() {
+    return this.Purchasingticketformgroup.controls['Credetcard'];
+  }
+
 
 
   bookFlight(flightid: number) {

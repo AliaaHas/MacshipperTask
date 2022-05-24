@@ -9,14 +9,17 @@
 	},
 
   "Home":{
-    "h":"AvaliableFlights",
+    "h":"Search for Your Trip",
     "btn":"Search",
     "from":"from",
     "to":"to"
   },
   "available":{
     "btn":"Book",
-    "title":"Avilable trips"
+    "title":"Avilable trips",
+    "depart":"Depart at",
+    "arrevail":"Arreval at ",
+    "fare":"Ticket Fare"
   },
   "passenger":{
     "h":"Passenger Information",
@@ -26,7 +29,8 @@
     "age":"Enter Your Age",
     "num":"NumberOfTickets",
     "id":"TripID",
-    "fare":"TripFare"
+    "fare":"TripFare",
+    "card":"Enter Credetcard Number"
   }
 
 }

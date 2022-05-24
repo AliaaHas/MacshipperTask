@@ -60,6 +60,16 @@
 
         </mat-form-field>
       </div>
+
+      <div class="col-md-7">
+        <mat-form-field class="full-width">
+          <input  formControlName="Credetcard" matInput placeholder="{{ 'passenger.card' | translate }}">
+        </mat-form-field>
+        <span class="text-danger"
+              *ngIf="(card.touched || submitted) && card.errors?.['required']">
+              Credetcard is required
+                  </span>
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="accent" type="submit">{{ 'passenger.btn' | translate }}</button>
